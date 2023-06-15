@@ -1,0 +1,120 @@
+<LoginScreen>:
+
+    theme_text_color: "Custom"
+    MDCard :
+        size_hint : None,None
+        size : 320,400
+        pos_hint : {"center_x":.5,"center_y":.5}
+        elevation : 5
+        theme_text_color: "Custom"
+        padding : 20
+        spacing : 30
+        orientation : "vertical"
+        # Adding items to the card
+        MDLabel :
+            text : 'LOGIN'
+            font_style : 'Button'
+            font_size : 35
+            halign : "center"
+
+        MDTextField :
+            id : email
+            hint_text : "email"
+            icon_right : "account"
+            size_hint_x : None
+            width : 220
+            font_size : 20
+            pos_hint : {"center_x":.5}
+            color_active : [1,1,1,1]
+        MDTextField :
+            id : password
+            hint_text : "password"
+            icon_right : "eye-off"
+            size_hint_x : None
+            width : 220
+            font_size : 20
+            pos_hint : {"center_x":.5}
+            color_active : [1,1,1,1]
+            password : True
+        MDRoundFlatButton :
+            text : 'REGISTER NOW'
+            pos_hint : {"center_x":.5}
+            font_size : 15
+
+            on_release: root.manager.current='SignUpScreen'
+        MDRoundFlatButton:
+            text: 'LOGIN'
+            pos_hint: {"center_x": .5}
+            font_size: 15
+
+            on_release: app.get_data(email.text, password.text)
+
+
+<SignUpScreen>:
+    theme_text_color: "Custom"
+    MDCard :
+        size_hint : None,None
+        size : 320,400
+        pos_hint : {"center_x":.5,"center_y":.5}
+        elevation : 5
+        theme_text_color: "Custom"
+        padding : 20
+        spacing : 30
+        orientation : "vertical"
+        # Adding items to the card
+        MDLabel :
+            text : 'SIGN-UP'
+            font_style : 'Button'
+            font_size : 35
+            halign : "center"
+
+        MDTextField :
+            id : email
+            hint_text : "email"
+            icon_right : "account"
+            size_hint_x : None
+            width : 220
+            font_size : 20
+            pos_hint : {"center_x":.5}
+            color_active : [1,1,1,1]
+        MDTextField :
+            id : password
+            hint_text : "password"
+            icon_right : "eye-off"
+            size_hint_x : None
+            width : 220
+            font_size : 20
+            pos_hint : {"center_x":.5}
+            color_active : [1,1,1,1]
+            password : True
+        MDRoundFlatButton :
+            text : 'SIGN-UP'
+            pos_hint : {"center_x":.5}
+            font_size : 15
+
+            on_release: app.send_data(email.text, password.text)
+        MDRoundFlatButton:
+            text: 'LOGIN'
+            pos_hint: {"center_x": .5}
+            font_size: 15
+            on_release:
+                root.manager.current='Login'
+
+<MenuScreen>:
+    theme_text_color: "Custom"
+    MDCard:
+        size_hint: None, None
+        size: 320, 400
+        pos_hint: {"center_x": .5, "center_y": .5}
+        elevation: 5
+        theme_text_color: "Custom"
+        padding: 20
+        spacing: 30
+        orientation: "vertical"
+
+        MDLabel:
+            id: greeting_label
+            text: "Hola"
+            font_style: "Button"
+            font_size: 35
+            halign: "center"
