@@ -1,20 +1,27 @@
 <LoginScreen>:
+    canvas.before:
+        Color:
+            rgba: (1, 1, 1, 1)
+        Rectangle:
+            source:'tay.png'
+            size: root.width, root.height
+            pos: self.pos
 
     theme_text_color: "Custom"
     MDCard :
         size_hint : None,None
-        size : 320,400
+        size: "350dp", "400dp"
         pos_hint : {"center_x":.5,"center_y":.5}
         elevation : 5
         theme_text_color: "Custom"
-        padding : 20
-        spacing : 30
+        padding : "20dp"
+        spacing : "30dp"
         orientation : "vertical"
         # Adding items to the card
         MDLabel :
             text : 'LOGIN'
             font_style : 'Button'
-            font_size : 35
+            font_size : "35dp"
             halign : "center"
 
         MDTextField :
@@ -22,8 +29,8 @@
             hint_text : "email"
             icon_right : "account"
             size_hint_x : None
-            width : 220
-            font_size : 20
+            width : "220dp"
+            font_size : "20dp"
             pos_hint : {"center_x":.5}
             color_active : [1,1,1,1]
         MDTextField :
@@ -31,21 +38,21 @@
             hint_text : "password"
             icon_right : "eye-off"
             size_hint_x : None
-            width : 220
-            font_size : 20
+            width : "220dp"
+            font_size : "20dp"
             pos_hint : {"center_x":.5}
             color_active : [1,1,1,1]
             password : True
         MDRoundFlatButton :
             text : 'REGISTER NOW'
             pos_hint : {"center_x":.5}
-            font_size : 15
+            font_size : "15dp"
 
             on_release: root.manager.current='SignUpScreen'
         MDRoundFlatButton:
             text: 'LOGIN'
             pos_hint: {"center_x": .5}
-            font_size: 15
+            font_size: "15dp"
 
             on_release: app.get_data(email.text, password.text)
 
@@ -54,18 +61,18 @@
     theme_text_color: "Custom"
     MDCard :
         size_hint : None,None
-        size : 320,400
+        size: "350dp", "400dp"
         pos_hint : {"center_x":.5,"center_y":.5}
         elevation : 5
         theme_text_color: "Custom"
-        padding : 20
-        spacing : 30
+        padding : "20dp"
+        spacing : "30dp"
         orientation : "vertical"
         # Adding items to the card
         MDLabel :
             text : 'SIGN-UP'
             font_style : 'Button'
-            font_size : 35
+            font_size : "35dp"
             halign : "center"
 
         MDTextField :
@@ -73,8 +80,8 @@
             hint_text : "email"
             icon_right : "account"
             size_hint_x : None
-            width : 220
-            font_size : 20
+            width : "220dp"
+            font_size : "20dp"
             pos_hint : {"center_x":.5}
             color_active : [1,1,1,1]
         MDTextField :
@@ -82,21 +89,21 @@
             hint_text : "password"
             icon_right : "eye-off"
             size_hint_x : None
-            width : 220
-            font_size : 20
+            width : "220dp"
+            font_size : "20dp"
             pos_hint : {"center_x":.5}
             color_active : [1,1,1,1]
             password : True
         MDRoundFlatButton :
             text : 'SIGN-UP'
             pos_hint : {"center_x":.5}
-            font_size : 15
+            font_size : "15dp"
 
             on_release: app.send_data(email.text, password.text)
         MDRoundFlatButton:
             text: 'LOGIN'
             pos_hint: {"center_x": .5}
-            font_size: 15
+            font_size: "15dp"
             on_release:
                 root.manager.current='Login'
 
@@ -104,17 +111,17 @@
     theme_text_color: "Custom"
     MDCard:
         size_hint: None, None
-        size: 320, 400
+        size: "350dp", "400dp"
         pos_hint: {"center_x": .5, "center_y": .5}
         elevation: 5
         theme_text_color: "Custom"
-        padding: 20
-        spacing: 30
+        padding: "20dp"
+        spacing: "30dp"
         orientation: "vertical"
 
         MDLabel:
             id: greeting_label
             text: "Hola"
             font_style: "Button"
-            font_size: 35
+            font_size: "35dp"
             halign: "center"
